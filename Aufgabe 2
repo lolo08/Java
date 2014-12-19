@@ -1,0 +1,43 @@
+package Klausuraufgaben13_14;
+
+public class Aufgabe2_Schachbrett {
+
+	public static void main(String[] args)
+	{
+	// boolean[][] brett = new boolean[8][8];
+	
+	gibtAus(setzeTurm(2,5));
+	
+	}
+	
+	public static boolean[][] setzeTurm(int x, int y)
+	{
+		boolean[][] array = new boolean[8][8];
+		
+		for (int i = 0; i < 8; i++)
+			{
+				array[x][i] = true;
+				array[i][y] = true;
+			}
+		return  array;
+	}
+	
+	public static void gibtAus(boolean[][] a)
+	{
+	String[][] array = new String[8][8];
+		
+		for (int i = 0; i < 8; i++)
+		{
+			System.out.println("");
+			for(int c = 0; c <8; c++)
+			{
+			if (a[i][c] == true)
+			{ 
+			 array[i][c] = "x";
+			}
+			else { array[i][c] = "o";}
+			System.out.print(array[i][c]+ " ");
+			}
+	}	
+}
+}
